@@ -1,0 +1,11 @@
+{% if ultimas_perguntas_lista %}
+<ul>
+  {% for pergunta in ultimas_perguntas_lista %}
+  <li>
+    <a href="/enquetes/{{ pergunta.id }}/">{{ pergunta.texto_pergunta }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>Não há enquetes disponíveis!</p>
+{% endif %}
